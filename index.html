@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Links Hub</title>
+  <style>
+    /* ─── GLOBAL RESET & BASE ─────────────────────────────────────────── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    /* ─── PAGE HEADER ─────────────────────────────────────────────────── */
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: #666;
+      margin-top: 6px;
+      font-size: 0.95rem;
+    }
+
+    /* ─── MAIN GRID (single column, centered) ────────────────────────── */
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ─── CATEGORY CARD ───────────────────────────────────────────────── */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    /* Category title row */
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* Coloured dot — change the color per card below */
+    .card-header .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .card-header h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ─── LINK LIST ───────────────────────────────────────────────────── */
+    .link-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .link-list li a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.9rem;
+      padding: 6px 8px;
+      border-radius: 6px;
+      transition: background 0.15s;
+    }
+
+    .link-list li a:hover {
+      background: #f0f0f0;
+      color: #000;
+    }
+
+    /* Arrow icon before each link */
+    .link-list li a::before {
+      content: '→';
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+
+    /* ─── FOOTER ──────────────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #aaa;
+      font-size: 0.8rem;
+    }
+
+    /* ─── RESPONSIVE: TABLET (max 768px) ─────────────────────────────── */
+    @media (max-width: 768px) {
+      body {
+        padding: 28px 16px;
+      }
+
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      .grid {
+        max-width: 100%;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+
+    /* ─── RESPONSIVE: MOBILE (max 480px) ─────────────────────────────── */
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 12px;
+      }
+
+      header h1 {
+        font-size: 1.3rem;
+      }
+
+      header p {
+        font-size: 0.85rem;
+      }
+
+      .card {
+        padding: 16px;
+        border-radius: 8px;
+      }
+
+      .card-header h2 {
+        font-size: 0.85rem;
+      }
+
+      .link-list li a {
+        font-size: 0.88rem;
+        padding: 8px 6px; /* slightly bigger tap target on mobile */
+      }
+
+      footer {
+        margin-top: 40px;
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE HEADER — change the title and subtitle to whatever you like
+  ════════════════════════════════════════════════════════════════════ -->
+  <header>
+    <h1>🔗 My Links Hub</h1>
+    <p>All your favourite places, one page.</p>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       GRID — each .card is one category.
+       To ADD a new category: copy any full <div class="card">…</div>
+       block below, paste it here, and update the title + links.
+  ════════════════════════════════════════════════════════════════════ -->
+  <div class="grid">
+
+
+    <!-- ─────────────────────────────────────────────────────────────────
+         CATEGORY: ENTERTAINMENT
+         dot color → pick any CSS colour value you like
+    ──────────────────────────────────────────────────────────────────── -->
+    <div class="card">
+      <div class="card-header">
+        <span class="dot" style="background:#f87171;"></span>
+        <h2>Entertainment</h2>
+      </div>
+      <ul class="link-list">
+        <!-- ADD / EDIT your links below. Pattern:
+             <li><a href="URL">Display Name</a></li>   -->
+        <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+        <li><a href="#" target="_blank">Link 2 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 3 — replace me</a></li>
+      </ul>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────────────────────────
+         CATEGORY: GAMES
+    ──────────────────────────────────────────────────────────────────── -->
+    <div class="card">
+      <div class="card-header">
+        <span class="dot" style="background:#fb923c;"></span>
+        <h2>Games</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="#" target="_blank">Link 1 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 2 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 3 — replace me</a></li>
+      </ul>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────────────────────────
+         CATEGORY: MOVIES & SHOWS
+    ──────────────────────────────────────────────────────────────────── -->
+    <div class="card">
+      <div class="card-header">
+        <span class="dot" style="background:#a78bfa;"></span>
+        <h2>Movies &amp; Shows</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="#" target="_blank">Link 1 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 2 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 3 — replace me</a></li>
+      </ul>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────────────────────────
+         CATEGORY: AI TOOLS
+    ──────────────────────────────────────────────────────────────────── -->
+    <div class="card">
+      <div class="card-header">
+        <span class="dot" style="background:#34d399;"></span>
+        <h2>AI Tools</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="https://claude.ai" target="_blank">Claude</a></li>
+        <li><a href="https://chat.openai.com" target="_blank">ChatGPT</a></li>
+        <li><a href="#" target="_blank">Link 3 — replace me</a></li>
+      </ul>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────────────────────────
+         CATEGORY: CONTENT WRITING
+    ──────────────────────────────────────────────────────────────────── -->
+    <div class="card">
+      <div class="card-header">
+        <span class="dot" style="background:#60a5fa;"></span>
+        <h2>Content Writing</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="#" target="_blank">Link 1 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 2 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 3 — replace me</a></li>
+      </ul>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────────────────────────
+         CATEGORY: SOCIAL MEDIA
+    ──────────────────────────────────────────────────────────────────── -->
+    <div class="card">
+      <div class="card-header">
+        <span class="dot" style="background:#f472b6;"></span>
+        <h2>Social Media</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="#" target="_blank">Link 1 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 2 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 3 — replace me</a></li>
+      </ul>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────────────────────────
+         CATEGORY: NEWS & READING
+    ──────────────────────────────────────────────────────────────────── -->
+    <div class="card">
+      <div class="card-header">
+        <span class="dot" style="background:#fbbf24;"></span>
+        <h2>News &amp; Reading</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="#" target="_blank">Link 1 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 2 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 3 — replace me</a></li>
+      </ul>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────────────────────────
+         CATEGORY: UTILITIES / TOOLS
+    ──────────────────────────────────────────────────────────────────── -->
+    <div class="card">
+      <div class="card-header">
+        <span class="dot" style="background:#94a3b8;"></span>
+        <h2>Utilities</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="#" target="_blank">Link 1 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 2 — replace me</a></li>
+        <li><a href="#" target="_blank">Link 3 — replace me</a></li>
+      </ul>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         ✏️  ADD MORE CATEGORIES HERE — just paste another block like this:
+
+    <div class="card">
+      <div class="card-header">
+        <span class="dot" style="background:#YOUR_COLOR;"></span>
+        <h2>Category Name</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="https://example.com" target="_blank">Site Name</a></li>
+      </ul>
+    </div>
+
+    ════════════════════════════════════════════════════════════════════ -->
+
+
+  </div><!-- end .grid -->
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       FOOTER — feel free to remove or edit
+  ════════════════════════════════════════════════════════════════════ -->
+  <footer>
+    <p>Personal links hub — last updated whenever you feel like it.</p>
+  </footer>
+
+</body>
+</html>
